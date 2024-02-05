@@ -72,7 +72,7 @@ class NetscapeBookmarkEncoder
             foreach ($tag['bookmarks'] as $bookmark) {
                 $result .= sprintf('<DT><A HREF="%s"', $bookmark['url']);
                 if ($bookmark['dateCreated'] ?? null) {
-                    $result .= sprintf('> ADD_DATE="%s"', $bookmark['dateCreated']);
+                    $result .= sprintf(' ADD_DATE="%s"', $bookmark['dateCreated']);
                 }
                 if ($bookmark['public'] ?? null) {
                     $result .= sprintf(' PRIVATE="%s"', $bookmark['public'] ? '0' : '1');
